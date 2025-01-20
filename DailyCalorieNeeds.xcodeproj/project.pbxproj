@@ -6,17 +6,20 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		443977E72D3E974500652439 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 443977E12D3E974500652439 /* Preview Assets.xcassets */; };
+		443977E82D3E974500652439 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 443977E32D3E974500652439 /* Assets.xcassets */; };
+		443977E92D3E974500652439 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 443977E42D3E974500652439 /* ContentView.swift */; };
+		443977EA2D3E974500652439 /* DailyCalorieNeedsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 443977E52D3E974500652439 /* DailyCalorieNeedsApp.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		443977D02D3E970500652439 /* DailyCalorieNeeds.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DailyCalorieNeeds.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		443977E12D3E974500652439 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		443977E32D3E974500652439 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		443977E42D3E974500652439 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		443977E52D3E974500652439 /* DailyCalorieNeedsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyCalorieNeedsApp.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
-
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		443977D22D3E970500652439 /* DailyCalorieNeeds */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = DailyCalorieNeeds;
-			sourceTree = "<group>";
-		};
-/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		443977CD2D3E970500652439 /* Frameworks */ = {
@@ -32,7 +35,7 @@
 		443977C72D3E970500652439 = {
 			isa = PBXGroup;
 			children = (
-				443977D22D3E970500652439 /* DailyCalorieNeeds */,
+				443977E62D3E974500652439 /* DailyCalorieNeeds */,
 				443977D12D3E970500652439 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -43,6 +46,41 @@
 				443977D02D3E970500652439 /* DailyCalorieNeeds.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		443977E22D3E974500652439 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				443977E12D3E974500652439 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		443977E62D3E974500652439 /* DailyCalorieNeeds */ = {
+			isa = PBXGroup;
+			children = (
+				443977E52D3E974500652439 /* DailyCalorieNeedsApp.swift */,
+				443977EC2D3E975300652439 /* Model */,
+				443977EB2D3E974D00652439 /* Views */,
+				443977E22D3E974500652439 /* Preview Content */,
+				443977E32D3E974500652439 /* Assets.xcassets */,
+			);
+			path = DailyCalorieNeeds;
+			sourceTree = "<group>";
+		};
+		443977EB2D3E974D00652439 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				443977E42D3E974500652439 /* ContentView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		443977EC2D3E975300652439 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -59,9 +97,6 @@
 			buildRules = (
 			);
 			dependencies = (
-			);
-			fileSystemSynchronizedGroups = (
-				443977D22D3E970500652439 /* DailyCalorieNeeds */,
 			);
 			name = DailyCalorieNeeds;
 			packageProductDependencies = (
@@ -109,6 +144,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				443977E72D3E974500652439 /* Preview Assets.xcassets in Resources */,
+				443977E82D3E974500652439 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,6 +156,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				443977E92D3E974500652439 /* ContentView.swift in Sources */,
+				443977EA2D3E974500652439 /* DailyCalorieNeedsApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
