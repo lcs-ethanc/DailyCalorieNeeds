@@ -19,15 +19,22 @@ struct DailyCaloriesCalculator: View {
             //Title
             HStack {
                
-                Text("Find the Roots")
+                Text("Daily Calorie Needs Calculator")
                     .font(.system(size:40))
                 Spacer ()
             }
 
             TextField("Input Weight (kg) [eg. 82.1]", text: $weight)
+                .font(.system(size:20))
+            
             TextField("Input Height (m) [eg. 1.78]", text: $weight)
+                .font(.system(size:20))
+            
             TextField("Input Age (yrs) [eg. 20]" , text: $weight)
+                .font(.system(size:20))
+            
             Slider(value: $PAL, in: 0...5,step:1)
+            
             Text("Physical Activity Level: \(PAL.formatted(.number.precision(.fractionLength(1))))")
             Spacer()
         }
