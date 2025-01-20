@@ -8,6 +8,12 @@
 import SwiftUI
 
 struct DailyCaloriesCalculator: View {
+    //MARK: Stored Properties
+    @State var weight = ""
+    @State var height = ""
+    @State var age = ""
+    @State var PAL: Double = 1.2
+    
     var body: some View {
         VStack {
             Image(systemName: "globe")
