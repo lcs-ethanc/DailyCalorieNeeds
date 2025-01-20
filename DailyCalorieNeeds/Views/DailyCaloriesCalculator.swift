@@ -16,14 +16,20 @@ struct DailyCaloriesCalculator: View {
     
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+            //Title
+            HStack {
+               
+                Text("Find the Roots")
+                    .font(.system(size:40))
+                Spacer ()
+            }
+
             TextField("Input Weight (kg) [eg. 82.1]", text: $weight)
             TextField("Input Height (m) [eg. 1.78]", text: $weight)
             TextField("Input Age (yrs) [eg. 20]" , text: $weight)
             Slider(value: $PAL, in: 0...5,step:1)
+            Text("Physical Activity Level: \(PAL.formatted(.number.precision(.fractionLength(1))))")
+            Spacer()
         }
         .padding()
     }
