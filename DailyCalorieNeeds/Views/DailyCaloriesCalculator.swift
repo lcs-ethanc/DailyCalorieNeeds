@@ -14,6 +14,8 @@ struct DailyCaloriesCalculator: View {
     @State var age = ""
     @State var PAL: Double = 1.2
     
+    //MARK: Computed Properties
+    
     var body: some View {
         VStack {
             //Title
@@ -33,9 +35,12 @@ struct DailyCaloriesCalculator: View {
             TextField("Input Age (yrs) [eg. 20]" , text: $weight)
                 .font(.system(size:20))
             
-            Slider(value: $PAL, in: 0...5,step:1)
-            
-            Text("Physical Activity Level: \(PAL.formatted(.number.precision(.fractionLength(1))))")
+            //Slider and Label
+            VStack{
+                Slider(value: $PAL, in: 0...5,step:1)
+                
+                Text("Physical Activity Level: \(PAL.formatted(.number.precision(.fractionLength(1))))")
+            }
             Spacer()
         }
         .padding()
