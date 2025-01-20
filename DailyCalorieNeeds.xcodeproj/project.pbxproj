@@ -9,16 +9,20 @@
 /* Begin PBXBuildFile section */
 		443977E72D3E974500652439 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 443977E12D3E974500652439 /* Preview Assets.xcassets */; };
 		443977E82D3E974500652439 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 443977E32D3E974500652439 /* Assets.xcassets */; };
-		443977E92D3E974500652439 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 443977E42D3E974500652439 /* ContentView.swift */; };
+		443977E92D3E974500652439 /* DailyCaloriesCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 443977E42D3E974500652439 /* DailyCaloriesCalculator.swift */; };
 		443977EA2D3E974500652439 /* DailyCalorieNeedsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 443977E52D3E974500652439 /* DailyCalorieNeedsApp.swift */; };
+		443977EE2D3E97A500652439 /* ResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 443977ED2D3E97A500652439 /* ResultView.swift */; };
+		443977F02D3E97B400652439 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 443977EF2D3E97B400652439 /* Result.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		443977D02D3E970500652439 /* DailyCalorieNeeds.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DailyCalorieNeeds.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		443977E12D3E974500652439 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		443977E32D3E974500652439 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		443977E42D3E974500652439 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		443977E42D3E974500652439 /* DailyCaloriesCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyCaloriesCalculator.swift; sourceTree = "<group>"; };
 		443977E52D3E974500652439 /* DailyCalorieNeedsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyCalorieNeedsApp.swift; sourceTree = "<group>"; };
+		443977ED2D3E97A500652439 /* ResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultView.swift; sourceTree = "<group>"; };
+		443977EF2D3E97B400652439 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,7 +75,8 @@
 		443977EB2D3E974D00652439 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				443977E42D3E974500652439 /* ContentView.swift */,
+				443977E42D3E974500652439 /* DailyCaloriesCalculator.swift */,
+				443977ED2D3E97A500652439 /* ResultView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -79,6 +84,7 @@
 		443977EC2D3E975300652439 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				443977EF2D3E97B400652439 /* Result.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -156,8 +162,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				443977E92D3E974500652439 /* ContentView.swift in Sources */,
+				443977E92D3E974500652439 /* DailyCaloriesCalculator.swift in Sources */,
 				443977EA2D3E974500652439 /* DailyCalorieNeedsApp.swift in Sources */,
+				443977F02D3E97B400652439 /* Result.swift in Sources */,
+				443977EE2D3E97A500652439 /* ResultView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
