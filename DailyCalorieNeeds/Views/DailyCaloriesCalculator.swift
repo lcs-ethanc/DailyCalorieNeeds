@@ -20,6 +20,10 @@ struct DailyCaloriesCalculator: View {
                 .imageScale(.large)
                 .foregroundStyle(.tint)
             Text("Hello, world!")
+            TextField("Input Weight (kg) [eg. 82.1]", text: $weight)
+            TextField("Input Height (m) [eg. 1.78]", text: $weight)
+            TextField("Input Age (yrs) [eg. 20]" , text: $weight)
+            Slider(value: $PAL, in: 0...5,step:1)
         }
         .padding()
     }
