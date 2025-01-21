@@ -12,7 +12,7 @@ struct DailyCaloriesCalculator: View {
     @State var weight = ""
     @State var height = ""
     @State var age = ""
-    @State var PAL: Double = 1.2
+    @State var PAC: Double = 1.2
     @State var feedback = ""
     
     //MARK: Computed Properties
@@ -48,10 +48,26 @@ struct DailyCaloriesCalculator: View {
             
             //Slider and Label
             VStack{
-                Slider(value: $PAL, in: 0...5,step:1)
+                Text("Physical Activity Coefficient: \(PAC.formatted(.number.precision(.fractionLength(2))))")
+                    
+                Slider(value: $PAC, in: 1...1.48,step:0.01)
+
                 
-                Text("Physical Activity Level: \(PAL.formatted(.number.precision(.fractionLength(1))))")
-            }
+                if PAC < 1.11 {
+                    Text("Inactive")
+
+                }
+                else if PAC < 1.25{
+                    Text("Not Very Active")
+                }
+                else if PAC < 1.37{
+                    Text("Active")
+                }
+                else if PAC < 1.48{
+                    Text("Very Active")
+                }
+
+            } .padding(.top,2)
             
             //Button to calculate
             Button{
@@ -89,13 +105,15 @@ struct DailyCaloriesCalculator: View {
             feedback = "Please input numeric value for age"
             return
         }
+        
         //Check if values are positive
         if weightValue > 0, heightValue > 0, ageValue > 0{
+            
             //Check if values are in plausible range
             if weightValue < 300, heightValue < 3, ageValue < 150 {
-                let dailyCalories = 662-(9.53*ageValue) + PAL*((15.91*weightValue) + (539.6*heightValue))
+                let dailyCalories = 662-(9.53*ageValue) + PAC*((15.91*weightValue) + (539.6*heightValue))
                 
-                feedback = "\(dailyCalories)"
+                feedback = " \(dailyCalories.formatted(.number.precision(.fractionLength(0)))) kcal/day"
             }
             else{
                 feedback = "Please input realistic values"
