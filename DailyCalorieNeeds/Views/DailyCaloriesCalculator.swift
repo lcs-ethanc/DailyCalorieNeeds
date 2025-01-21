@@ -56,26 +56,33 @@ struct DailyCaloriesCalculator: View {
     }
     //MARK: Functions
     func checkInputs(){
-        
+        //Check if weight can be converted to Double
         guard let weightValue = Double(weight)
         else {
             feedback = "Please input numeric value for weight"
             return
         }
+        
+        //Check if height can be converted to Double
         guard let heightValue = Double(height)
         else {
             feedback = "Please input numeric value for height"
             return
         }
-        guard let ageValue = Int(age)
+        
+        //Check if age can be converted to Double
+        guard let ageValue = Double(age)
         else {
             feedback = "Please input integer value for age"
             return
         }
+        //Check if values are positive
         if weightValue > 0, heightValue > 0, ageValue > 0{
+            //Check if values are in
             if weightValue < 300, heightValue < 3, ageValue < 150 {
+                let dailyCalories = 662-(9.53*ageValue) + PAL*((15.91*weightValue) + (539.6*heightValue))
                 
-                feedback = ""
+                feedback = "\(dailyCalories)"
             }
             else{
                 feedback = "Please input realistic values"
