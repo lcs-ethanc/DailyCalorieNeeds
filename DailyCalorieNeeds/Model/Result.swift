@@ -6,3 +6,10 @@
 //
 
 import Foundation
+
+struct Result: Identifiable{
+    let id = UUID()
+    let weight: Double
+    let height: Double
+    let age: Double
+}

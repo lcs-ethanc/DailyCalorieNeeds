@@ -52,10 +52,9 @@ struct DailyCaloriesCalculator: View {
                     
                 Slider(value: $PAC, in: 1...1.48,step:0.01)
 
-                
+                //Activity Level Details
                 if PAC < 1.11 {
                     Text("Inactive")
-
                 }
                 else if PAC < 1.25{
                     Text("Not Very Active")
@@ -63,7 +62,7 @@ struct DailyCaloriesCalculator: View {
                 else if PAC < 1.37{
                     Text("Active")
                 }
-                else if PAC < 1.48{
+                else if PAC <= 1.48{
                     Text("Very Active")
                 }
 
@@ -83,6 +82,7 @@ struct DailyCaloriesCalculator: View {
         .padding()
         
     }
+    
     //MARK: Functions
     func checkInputsThenCalc(){
         //Check if weight can be converted to Double
