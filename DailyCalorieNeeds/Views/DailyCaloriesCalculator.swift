@@ -59,8 +59,24 @@ struct DailyCaloriesCalculator: View {
         
         guard let weightValue = Double(weight)
         else {
-            feedback += "Please input valid values"
+            feedback = "Please input valid value for weight"
             return
+        }
+        guard let heightValue = Double(height)
+        else {
+            feedback = "Please input valid value for height"
+            return
+        }
+        guard let ageValue = Int(age)
+        else {
+            feedback = "Please input valid value for age"
+            return
+        }
+        if weightValue > 0, heightValue > 0, ageValue > 0{
+            feedback = "yes"
+        }
+        else{
+            feedback = "No"
         }
     }
 }
