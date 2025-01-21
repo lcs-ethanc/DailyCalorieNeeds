@@ -22,19 +22,29 @@ struct DailyCaloriesCalculator: View {
             //Title
             HStack {
                
-                Text("Daily Calorie Needs Calculator")
+                Text("Daily Caloric Needs Calculator")
                     .font(.system(size:40))
                 Spacer ()
             }
-
-            TextField("Input Weight (kg) [eg. 82.1]", text: $weight)
-                .font(.system(size:20))
             
-            TextField("Input Height (m) [eg. 1.78]", text: $height)
-                .font(.system(size:20))
+            //Weight
+            HStack{
+                Text("Weight (kg) :")
+                TextField("[eg. 82.1]", text: $weight)
+            }.font(.system(size:20))
             
-            TextField("Input Age (yrs) [eg. 20]" , text: $age)
-                .font(.system(size:20))
+            //Height
+            HStack{
+                Text("Height (m) :")
+                TextField("[eg. 1.78]", text: $height)
+            }.font(.system(size:20))
+            
+            //Age
+            HStack{
+                Text("Age (yrs)")
+                TextField("[eg. 20]" , text: $age)
+            }                 .font(.system(size:20))
+           
             
             //Slider and Label
             VStack{
@@ -42,12 +52,15 @@ struct DailyCaloriesCalculator: View {
                 
                 Text("Physical Activity Level: \(PAL.formatted(.number.precision(.fractionLength(1))))")
             }
+            
+            //Button to calculate
             Button{
-                checkInputs()
+                checkInputsThenCalc()
             } label:{
                 Text("Calculate")
-            }
-            .buttonStyle(.borderedProminent)
+            }.buttonStyle(.borderedProminent)
+            
+            //Feedback Text
             Text("\(feedback)")
             Spacer()
         }
@@ -55,7 +68,7 @@ struct DailyCaloriesCalculator: View {
         
     }
     //MARK: Functions
-    func checkInputs(){
+    func checkInputsThenCalc(){
         //Check if weight can be converted to Double
         guard let weightValue = Double(weight)
         else {
@@ -73,12 +86,12 @@ struct DailyCaloriesCalculator: View {
         //Check if age can be converted to Double
         guard let ageValue = Double(age)
         else {
-            feedback = "Please input integer value for age"
+            feedback = "Please input numeric value for age"
             return
         }
         //Check if values are positive
         if weightValue > 0, heightValue > 0, ageValue > 0{
-            //Check if values are in
+            //Check if values are in plausible range
             if weightValue < 300, heightValue < 3, ageValue < 150 {
                 let dailyCalories = 662-(9.53*ageValue) + PAL*((15.91*weightValue) + (539.6*heightValue))
                 
@@ -92,6 +105,7 @@ struct DailyCaloriesCalculator: View {
             feedback = "Please input positive values"
         }
     }
+    
 }
 
 #Preview {
