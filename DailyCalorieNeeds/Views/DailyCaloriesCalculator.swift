@@ -96,8 +96,15 @@ struct DailyCaloriesCalculator: View {
                     Spacer()
                 }
             }
+            //Reset Button
+            Button{
+                reset()
+            } label: {
+                Text("Reset")
+            }.padding(5)
             Spacer()
         }
+   
         .padding()
         
     }
@@ -141,6 +148,14 @@ struct DailyCaloriesCalculator: View {
         else{
             feedback = "Please input positive values"
         }
+    }
+    func reset() {
+        feedback = ""
+        weight = ""
+        height = ""
+        age = ""
+        PAC = 1.2
+        priorResults.removeAll()
     }
     
 }
