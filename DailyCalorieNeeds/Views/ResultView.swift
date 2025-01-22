@@ -17,7 +17,7 @@ struct ResultView: View {
                 Text("Age: " + shownResult.age)
 
             }.padding(5)
-                Text("Physical Activity Coefficient: \(shownResult.PAC.formatted())")
+            Text("Physical Activity Coefficient: \(shownResult.PAC.formatted(.number.precision(.fractionLength(2))))")
                 .padding(.bottom,5)
                 Text(shownResult.dailyCalories)
                 .lineLimit(1)
