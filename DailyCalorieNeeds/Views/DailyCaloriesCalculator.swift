@@ -80,9 +80,9 @@ struct DailyCaloriesCalculator: View {
             Spacer()
             
             //Button to save history
-            Button(action: {
-                let latestResult = Result(weight: weight, height: height, age: age, PAC: PAC, dailyCalories: feedback)
-            }, label: <#T##() -> View#>)
+          //  Button(action: {
+            //   let latestResult = Result(weight: weight, height: height, age: age, PAC: PAC, dailyCalories: feedback)
+           // }, label: <#T##() -> View#>)
         }
         .padding()
         

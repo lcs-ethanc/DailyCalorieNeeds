@@ -16,4 +16,4 @@ struct Result: Identifiable{
     let dailyCalories: String
 }
 
-let resultForPreviews = Result(weight: "100", height: "1.7", age: "17", PAC: 1.3, dailyCalories: "")
+let resultForPreviews = Result(weight: "100", height: "1.7", age: "17", PAC: 1.3, dailyCalories: "TEST")

@@ -8,11 +8,22 @@
 import SwiftUI
 
 struct ResultView: View {
+    let shownResult: Result
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack{
+            HStack{
+                Text("Weight: " + shownResult.weight)
+                Text("Height: " + shownResult.height)
+                Text("Age: " + shownResult.age)
+
+            }.padding(5)
+                Text("Physical Activity Coefficient: \(shownResult.PAC.formatted())")
+                .padding(.bottom,5)
+                Text(shownResult.dailyCalories)
+        }
     }
 }
 
 #Preview {
-    ResultView()
+    ResultView(shownResult: resultForPreviews)
 }
