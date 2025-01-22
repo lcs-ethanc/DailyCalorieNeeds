@@ -14,7 +14,7 @@ struct DailyCaloriesCalculator: View {
     @State var age = ""
     @State var PAC: Double = 1.2
     @State var feedback = ""
-    
+    @State var priorResults: [Result] = []
     //MARK: Computed Properties
     
     var body: some View {
@@ -77,12 +77,16 @@ struct DailyCaloriesCalculator: View {
             
             //Feedback Text
             Text("\(feedback)")
-            Spacer()
+            
             
             //Button to save history
-          //  Button(action: {
-            //   let latestResult = Result(weight: weight, height: height, age: age, PAC: PAC, dailyCalories: feedback)
-           // }, label: <#T##() -> View#>)
+            Button(action: {
+            let latestResult = Result(weight: weight, height: height, age: age, PAC: PAC, dailyCalories: feedback)
+                priorResults.append(latestResult)
+            }, label: {
+                Text("Save Result")
+            })
+            Spacer()
         }
         .padding()
         
