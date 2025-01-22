@@ -85,7 +85,17 @@ struct DailyCaloriesCalculator: View {
                 priorResults.append(latestResult)
             }, label: {
                 Text("Save Result")
-            })
+            }).buttonStyle(.borderedProminent)
+            
+            //History List
+            List(priorResults.reversed()){
+                x in
+                HStack{
+                   Spacer()
+                    ResultView(shownResult: x)
+                    Spacer()
+                }
+            }
             Spacer()
         }
         .padding()
