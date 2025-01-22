@@ -20,6 +20,8 @@ struct ResultView: View {
                 Text("Physical Activity Coefficient: \(shownResult.PAC.formatted())")
                 .padding(.bottom,5)
                 Text(shownResult.dailyCalories)
+                .lineLimit(1)
+                .minimumScaleFactor(0.6)
         }
     }
 }

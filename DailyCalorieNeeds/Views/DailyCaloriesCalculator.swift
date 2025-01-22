@@ -67,25 +67,29 @@ struct DailyCaloriesCalculator: View {
                 }
 
             } .padding(.top,2)
+            HStack{
+                //Button to calculate
+                Button{
+                    checkInputsThenCalc()
+                } label:{
+                    Text("Calculate")
+                }.buttonStyle(.borderedProminent)
+                
+     
+                
+                
+                //Button to save history
+                Button(action: {
+                let latestResult = Result(weight: weight, height: height, age: age, PAC: PAC, dailyCalories: feedback)
+                    priorResults.append(latestResult)
+                }, label: {
+                    Text("Save Result")
+                }).buttonStyle(.borderedProminent)
+            }
             
-            //Button to calculate
-            Button{
-                checkInputsThenCalc()
-            } label:{
-                Text("Calculate")
-            }.buttonStyle(.borderedProminent)
             
             //Feedback Text
             Text("\(feedback)")
-            
-            
-            //Button to save history
-            Button(action: {
-            let latestResult = Result(weight: weight, height: height, age: age, PAC: PAC, dailyCalories: feedback)
-                priorResults.append(latestResult)
-            }, label: {
-                Text("Save Result")
-            }).buttonStyle(.borderedProminent)
             
             //History List
             List(priorResults.reversed()){
